@@ -18,11 +18,11 @@ public class ApplicationEvent {
     @DynamoDBAttribute
     private VendorEvent vendorEventJson;
     @DynamoDBAttribute
-    private String vendorEventTimeStamp;
+    private Long vendorEventTimeStamp;
     @DynamoDBAttribute
     private VendorEvent eventDispatchJson;
     @DynamoDBAttribute
-    private String eventDispatchTimeStamp;
+    private Long eventDispatchTimeStamp;
     @DynamoDBAttribute
     private Integer retry;
 }

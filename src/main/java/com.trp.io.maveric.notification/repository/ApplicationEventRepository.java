@@ -6,13 +6,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class ApplicationEventRepository {
 
-    /*@Autowired
-    private DynamoDBMapper mapper;*/
-
-    public ApplicationEvent addApplicationEvent(ApplicationEvent applicationEvent) {
+    public void addApplicationEvent(ApplicationEvent applicationEvent) {
         //Save the Event in DynamoDB
         //mapper.save(applicationEvent);
-        return applicationEvent;
     }
 
 }

@@ -1,7 +1,7 @@
 package com.trp.io.maveric.notification.controller;
 
-import com.trp.io.maveric.notification.entity.ApplicationEvent;
-import com.trp.io.maveric.notification.repository.ApplicationEventRepository;
+import com.trp.io.maveric.notification.entity.VendorEvent;
+import com.trp.io.maveric.notification.service.NotificationEventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,16 +10,16 @@ import org.springframework.web.bind.annotation.*;
 public class NotificationController {
 
     @Autowired
-    private ApplicationEventRepository repository;
+    private NotificationEventService service;
 
     @PostMapping("/savePerson")
-    public ApplicationEvent saveApplicationEvent(@RequestBody ApplicationEvent applicationEvent) {
-        return repository.addApplicationEvent(applicationEvent);
+    public VendorEvent saveApplicationEvent(@RequestBody VendorEvent vendorEvent) {
+        return service.addApplicationEvent(vendorEvent);
     }
 
     @GetMapping("/test")
     public String testApplication()
     {
-        return "UP";
+        return "Status is UP";
     }
 }
