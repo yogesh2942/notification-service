@@ -12,7 +12,7 @@ public class NotificationController {
     @Autowired
     private NotificationEventService service;
 
-    @PostMapping("/savePerson")
+    @PostMapping("/publish-event")
     public VendorEvent saveApplicationEvent(@RequestBody VendorEvent vendorEvent) {
         return service.addApplicationEvent(vendorEvent);
     }
